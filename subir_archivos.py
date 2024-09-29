@@ -10,6 +10,7 @@ async def subir(file: UploadFile = File(...)):
     name_archivo = file.filename
     type_archivo = file.content_type
     
+    os.makedirs("archivos", exist_ok=True)
 
     locacion = f"archivos/{name_archivo}"
 
